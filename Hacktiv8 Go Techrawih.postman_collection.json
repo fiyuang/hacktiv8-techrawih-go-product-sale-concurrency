@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "c66f074b-eea3-48b6-b5c9-1f50cb11672b",
+		"name": "Hacktiv8 Go Techrawih",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7183159",
+		"_collection_link": "https://winter-capsule-492684.postman.co/workspace/Team-Workspace~515e2f74-a37a-48be-88d8-739d4563cff1/collection/7183159-c66f074b-eea3-48b6-b5c9-1f50cb11672b?action=share&source=collection_link&creator=7183159"
+	},
+	"item": [
+		{
+			"name": "Product Sales",
+			"item": [
+				{
+					"name": "Sales",
+					"item": [
+						{
+							"name": "Import",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/fitrianggraini/Downloads/sales_data_updated (4).csv"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/sales/import",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"sales",
+										"import"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Import Optimized",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/fitrianggraini/Documents/go-techrawih/rawih-shop-optimized/sales_data_updated.csv"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url_optimized}}/sales/import",
+									"host": [
+										"{{url_optimized}}"
+									],
+									"path": [
+										"sales",
+										"import"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "url_optimized",
+			"value": "http://localhost:8000/api/v1",
+			"type": "string"
+		}
+	]
+}
